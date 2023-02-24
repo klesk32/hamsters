@@ -46,7 +46,7 @@ launches = 0
 # Loop until the program is manually stopped
 while True:
     # Wait for a random interval of no more than one minute
-    time.sleep(random.randint(1, 45))
+    time.sleep(random.randint(1, 120))
     
     # Generate a random hamster name
     name = random.choice(prefixes) + random.choice(middle) + random.choice(suffixes)
