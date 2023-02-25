@@ -95,5 +95,5 @@ while True:
     
     # Get then print the number of hamsters at that location
     destcounts[destination] = destcounts.get(destination, 0) + 1
-    print(f"There are currently {destcounts[destination]} at the {destination}")    
+    print(f"There are currently {destcounts[destination]} hamsters at {destination}")    
     print(f"{RED}-----------------------------------{RESET}")
