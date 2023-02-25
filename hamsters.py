@@ -18,7 +18,7 @@ suffixes = ['ane', 'bel', 'cor', 'dor', 'ene', 'fyr', 'gol', 'hin', 'ice', 'jol'
 middle = ['ax', 'ble', 'cer', 'dax', 'ela', 'fiz', 'gal', 'hin', 'ixo', 'jex', 'kyl', 'lim', 'mux', 'nox', 'por', 'qel', 'rix', 'sax', 'tix', 'uvi']
 
 # Define the array of possible destinations for the hamsters
-destinations = ['an orbital trajectory', 'the furthest reaches of deep space', 'the moon', 'Mars', 'Venus', 'Jupiter', 'Saturn', 'Uranus', 'Neptune',"Pluto", "Ceres", "Eris", "Haumea", "Makemake", "Europa", "Ganymede", "Titan", "Enceladus", "Callisto", "Triton", "Oberon", "Tethys", "Iapetus", "Hyperion", "Phoebe", "Rhea", "Dione", "Charon", "Sedna"]
+destinations = ['the furthest reaches of deep space', 'the moon', 'Mars', 'Venus', 'Jupiter', 'Saturn', 'Uranus', 'Neptune',"Pluto", "Ceres", "Eris", "Haumea", "Makemake", "Europa", "Ganymede", "Titan", "Enceladus", "Callisto", "Triton", "Oberon", "Tethys", "Iapetus", "Hyperion", "Phoebe", "Rhea", "Dione", "Charon", "Sedna"]
 
 # Define the libraries of sentences for the hamster intro and bio
 intros = [
@@ -42,7 +42,7 @@ print(f"{RED}-----------------------------------{RESET}")
 
 # Initialize the hamster launch counter
 launches = 0
-
+destcounts = {}
 # Loop until the program is manually stopped
 while True:
     # Wait for a random interval of no more than one minute
@@ -92,4 +92,8 @@ while True:
 
     # Print the current number of hamster launches
     print(f"{GREEN}Total hamster launches: {launches}{RESET}")
+    
+    # Get then print the number of hamsters at that location
+    destcounts[destination] = destcounts.get(destination, 0) + 1
+    print(f"There are currently {destcounts[destination]} at the {destination}")    
     print(f"{RED}-----------------------------------{RESET}")
